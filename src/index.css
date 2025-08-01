@@ -105,9 +105,18 @@
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
+<<<<<<< HEAD
 
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
+=======
+    --foreground-secondary: 215 25% 60%;
+    --foreground-muted: 215 16% 70%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --card-border: 217.2 32.6% 17.5%;
+>>>>>>> 8ef00d180ee41863baaaffd083ca665332cd4a12
 
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
@@ -231,4 +240,8 @@
   100% {
     background-position: 200% 0;
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 8ef00d180ee41863baaaffd083ca665332cd4a12
