@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-import { Bell, Search, User, Menu } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-=======
 import { Bell, Search, User, Menu, Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { useThemeContext } from '@/providers/ThemeProvider';
->>>>>>> 8ef00d180ee41863baaaffd083ca665332cd4a12
+import { useTheme } from '@/providers/ThemeProvider';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -23,11 +17,8 @@ interface HeaderProps {
 }
 
 export function Header({ onToggleSidebar }: HeaderProps) {
-<<<<<<< HEAD
-=======
-  const { theme, toggleTheme } = useThemeContext();
+  const { theme, setTheme } = useTheme();
 
->>>>>>> 8ef00d180ee41863baaaffd083ca665332cd4a12
   return (
     <header className="sticky top-0 z-30 w-full border-b border-card-border bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/60">
       <div className="flex h-16 items-center gap-4 px-6">
@@ -54,16 +45,13 @@ export function Header({ onToggleSidebar }: HeaderProps) {
 
         {/* Actions */}
         <div className="flex items-center gap-2">
-<<<<<<< HEAD
-=======
           {/* Theme Toggle */}
-          <Button variant="ghost" size="sm" onClick={toggleTheme}>
+          <Button variant="ghost" size="sm" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
             <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
             <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
             <span className="sr-only">Toggle theme</span>
           </Button>
 
->>>>>>> 8ef00d180ee41863baaaffd083ca665332cd4a12
           {/* Notifications */}
           <Button variant="ghost" size="sm" className="relative">
             <Bell className="w-5 h-5" />
@@ -109,8 +97,4 @@ export function Header({ onToggleSidebar }: HeaderProps) {
       </div>
     </header>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 8ef00d180ee41863baaaffd083ca665332cd4a12
