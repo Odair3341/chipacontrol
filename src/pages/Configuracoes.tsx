@@ -34,7 +34,8 @@ export default function Configuracoes() {
         return <StoreSettingsCard />;
       case 'notificacoes':
         return <NotificationsCard />;
-      case 'pagamento':
+      case 'aparencia':
+        return <AppearanceCard />;case 'pagamento':
         return <PaymentMethodsCard />;
       default:
         return (
@@ -290,6 +291,42 @@ const NotificationsCard = () => (
     </CardContent>
   </Card>
 );
+
+import { useTheme } from "@/hooks/use-theme";
+
+const AppearanceCard = () => {
+  const { setTheme } = useTheme();
+
+  return (
+    <Card className="card-gradient">
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <Palette className="w-5 h-5" />
+          Aparência
+        </CardTitle>
+        <CardDescription>
+          Personalize a aparência do sistema
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        <div>
+          <h3 className="font-medium mb-2">Tema</h3>
+          <div className="flex space-x-2">
+            <Button variant="outline" onClick={() => setTheme("light")}>
+              Claro
+            </Button>
+            <Button variant="outline" onClick={() => setTheme("dark")}>
+              Escuro
+            </Button>
+            <Button variant="outline" onClick={() => setTheme("system")}>
+              Sistema
+            </Button>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+};
 
 const PaymentMethodsCard = () => (
   <Card className="card-gradient">
